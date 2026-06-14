@@ -1,15 +1,3 @@
-```{=org}
-#+qiita_private: bf2689a40f6e2816d606
-```
-```{=org}
-#+STARTUP: indent nolineimages overview num
-```
-```{=org}
-#+TAG: Pandoc, report, 双曲割引
-```
-```{=org}
-#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/html-theme-readtheorg.setup
-```
 # init(initialize:初期化)
 
 ``` shell
