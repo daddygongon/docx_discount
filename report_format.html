@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="jp" xml:lang="jp">
+<head>
+<!-- 2026-06-13 Sat 11:02 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>レポートの体裁</title>
+<meta name="author" content="Shigeto R. Nishitani" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/code-copy.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/search.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/search.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/code-copy.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">レポートの体裁</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgd959db6">1. レポートのコツ</a></li>
+<li><a href="#体裁文書パーツの着眼点">2. 体裁：文書パーツの着眼点</a>
+<ul>
+<li><a href="#段落の体裁">2.1. 段落の体裁</a></li>
+<li><a href="#フォントの体裁">2.2. フォントの体裁</a></li>
+<li><a href="#図表のキャプションcaption">2.3. 図表のキャプション(caption)</a></li>
+<li><a href="#引用quotequote">2.4. 引用(quote)</a></li>
+<li><a href="#参考文献references">2.5. 参考文献(references)</a></li>
+</ul>
+</li>
+<li><a href="#完成例">3. 完成例</a></li>
+<li><a href="#おまけappendixとかsupplement">4. おまけ(appendixとかsupplement)</a>
+<ul>
+<li><a href="#明朝とゴシックの違いとは">4.1. 明朝とゴシックの違いとは？？</a></li>
+<li><a href="#もう一つのチェックリスト">4.2. もう一つのチェックリスト</a></li>
+<li><a href="#org6e2fd12">4.3. コメント</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd959db6" class="outline-2">
+<h2 id="orgd959db6"><span class="section-number-2">1.</span> レポートのコツ</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+MS-Wordのmetapher(比喩)はもともとタイプライターで，
+textを平文で打つイメージでした．
+その後，版組や写植の技術も取り込んで進化し，
+文章の体裁を整えて見栄えを良くできるようになってきています．
+プログラマは，Wordを超えるいくつものより便利なツールを手に入れていますが，
+それらの元になるのは，WYSIWYG(<i>"what you see is what you get"</i>)のtasteです．
+それをこの講義で身につけてください．
+</p>
+
+<p>
+コツは，「文章」の中身にはなく，
+「文書」のパーツ(構成要素)を適切に組み合わせることです．
+</p>
+
+<p>
+文書の構成要素は，
+</p>
+<ul class="org-ul">
+<li>タイトル，作者情報</li>
+<li>平文（段落，フォントサイズ，）</li>
+<li>head(階層)</li>
+<li>リスト(記号付き，数字付き，宣言的)</li>
+<li>図・表(番号，キャプション，参照)</li>
+<li>数式</li>
+<li>引用</li>
+<li>参照文献</li>
+</ul>
+<p>
+からなります．これらの掟を見抜く目を身につけてください．<a href="https://qiita.com/daddygongon/items/a0f204107e32c82f52ea">
+<b>Markdownはそれを強制</b></a>します．
+</p>
+</div>
+</div>
+<div id="outline-container-体裁文書パーツの着眼点" class="outline-2">
+<h2 id="体裁文書パーツの着眼点"><span class="section-number-2">2.</span> 体裁：文書パーツの着眼点</h2>
+<div class="outline-text-2" id="text-体裁文書パーツの着眼点">
+</div>
+<div id="outline-container-段落の体裁" class="outline-3">
+<h3 id="段落の体裁"><span class="section-number-3">2.1.</span> 段落の体裁</h3>
+<div class="outline-text-3" id="text-段落の体裁">
+<ul class="org-ul">
+<li>配置は両端揃え</li>
+<li>表題(title)はゴシック，センタリング</li>
+<li>学籍番号，所属，名前は右詰め</li>
+<li>見出しはゴシック．</li>
+<li>字下げはスペースではなくインデントで調整
+
+<ul class="org-ul">
+<li>ドキュメントの上の目盛りをいじって下げてね</li>
+<li>引用した文章は両端のインデントを小さめにする．</li>
+<li>リスト(箇条書き)では，字下げを逆にする(つきだし，あるいはぶら下がり)と見栄えが良い．</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-フォントの体裁" class="outline-3">
+<h3 id="フォントの体裁"><span class="section-number-3">2.2.</span> フォントの体裁</h3>
+<div class="outline-text-3" id="text-フォントの体裁">
+<ul class="org-ul">
+<li>本文は明朝，見出し(<i>, *, *</i>)はゴシック</li>
+<li>レポートのページ数はフォントの大きさで調整．</li>
+<li>レポートでフォントの大きさが指定されたときは，行間で調整(最終手段)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-図表のキャプションcaption" class="outline-3">
+<h3 id="図表のキャプションcaption"><span class="section-number-3">2.3.</span> 図表のキャプション(caption)</h3>
+<div class="outline-text-3" id="text-図表のキャプションcaption">
+<ul class="org-ul">
+<li>キャプションとは図表の内容を説明する文章．</li>
+<li>図は下に，表は上にキャプションを配置．</li>
+<li>図，表それぞれで通し番号をつける．</li>
+<li>キャプションも文章なので，最後はピリオドで終わる．</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-引用quotequote" class="outline-3">
+<h3 id="引用quotequote"><span class="section-number-3">2.4.</span> 引用(quote)<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup></h3>
+<div class="outline-text-3" id="text-引用quotequote">
+<ul class="org-ul">
+<li>無断の引用は剽窃になる．</li>
+<li>短いときは鉤括弧「」でくくる．</li>
+<li>英語は斜体(italic)かクオーテーション(', ")</li>
+<li>長いときは，block quoteと呼び，両端にインデントをとって本文と区別する</li>
+<li>引用元を明示する．</li>
+<li>角括弧[1]か上つき<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>にして，番号をふり文末に参考文献としてまとめる．</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-参考文献references" class="outline-3">
+<h3 id="参考文献references"><span class="section-number-3">2.5.</span> 参考文献(references)</h3>
+<div class="outline-text-3" id="text-参考文献references">
+<ul class="org-ul">
+<li>本文で出てきた順にナンバリングする．</li>
+<li>著者・題目・出版社・出版年をかく（体裁，書き方をそろえること！）．</li>
+<li>ピリオドで終わる．</li>
+<li>本文中の引用元の記載は[文献のナンバリング,引用元のページ数]というように書く．</li>
+<li>本文で引用されていない参考文献はない．</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-完成例" class="outline-2">
+<h2 id="完成例"><span class="section-number-2">3.</span> 完成例</h2>
+<div class="outline-text-2" id="text-完成例">
+<p>
+完成例は，
+</p>
+
+<ul class="org-ul">
+<li><a href="https://kwanseio365-my.sharepoint.com/:b:/g/personal/cru32369_nuc_kwansei_ac_jp/EdBfZhctRGRDqwfSOd0TOwMBm3Qz9EjF39Zb2PWo1FrhHw?e=a7hVOi">完成例</a></li>
+</ul>
+
+<p>
+です．私は，こんだけ整えるのに1時間とか，かかってしまいます :sob:
+．なんで，Markdown:bowtie: .
+そうすれば文章の中身に集中することができます:smile:．
+</p>
+</div>
+</div>
+<div id="outline-container-おまけappendixとかsupplement" class="outline-2">
+<h2 id="おまけappendixとかsupplement"><span class="section-number-2">4.</span> おまけ(appendixとかsupplement)</h2>
+<div class="outline-text-2" id="text-おまけappendixとかsupplement">
+</div>
+<div id="outline-container-明朝とゴシックの違いとは" class="outline-3">
+<h3 id="明朝とゴシックの違いとは"><span class="section-number-3">4.1.</span> 明朝とゴシックの違いとは？？</h3>
+<div class="outline-text-3" id="text-明朝とゴシックの違いとは">
+<p>
+書体は，欧米ではcalligraphyという一つの学問になってます．Appleの創始者のSteve
+Jobsが大学でそれしか学ばなかったのは有名な話． 
+</p>
+<ul class="org-ul">
+<li>文字の『止め』『跳ね』があるのが明朝体（教科書体）</li>
+<li>文字が太めで均一なのがゴシック体(強調体，見出し体)，校正ではゴチとも書く．</li>
+<li>欧文のSerif(セリフ)とSans-serif(サンセリフ)に対応</li>
+<li>Serifは文字の端っこに付いている飾り線（ひげ）</li>
+<li>『Sans』はフランス語で『ない』という意味</li>
+<li>roman(正体，立体), <b>bold(太字)</b>, <i>italic(斜体)</i> なんかの書式とはちょと違う</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-もう一つのチェックリスト" class="outline-3">
+<h3 id="もう一つのチェックリスト"><span class="section-number-3">4.2.</span> もう一つのチェックリスト</h3>
+<div class="outline-text-3" id="text-もう一つのチェックリスト">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">パーツ</th>
+<th scope="col" class="org-left">フォント設定他</th>
+<th scope="col" class="org-left">段落設定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">出力</td>
+<td class="org-left">.pdf (or .docx)</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">題目(title)</td>
+<td class="org-left">ゴチ(ちょっと大きめ)</td>
+<td class="org-left">中央揃え</td>
+</tr>
+
+<tr>
+<td class="org-left">名前(author)</td>
+<td class="org-left">学籍番号，所属，名前</td>
+<td class="org-left">右ヅメ</td>
+</tr>
+
+<tr>
+<td class="org-left">見出し(head)</td>
+<td class="org-left">ゴチ</td>
+<td class="org-left">左ヅメ</td>
+</tr>
+
+<tr>
+<td class="org-left">caption</td>
+<td class="org-left">ゴチ</td>
+<td class="org-left">インデント調整</td>
+</tr>
+
+<tr>
+<td class="org-left">本文</td>
+<td class="org-left">明朝(10-12p)</td>
+<td class="org-left">両端揃え(，先頭行一字下げ)</td>
+</tr>
+
+<tr>
+<td class="org-left">引用(quote)</td>
+<td class="org-left">自分の文章と引用との区別</td>
+<td class="org-left">インデント調整</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org6e2fd12" class="outline-3">
+<h3 id="org6e2fd12"><span class="section-number-3">4.3.</span> コメント</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>やり方のメモを残す</li>
+<li>レポートの体裁はできています．自分への縛りは，決意表明とか目標ではないので，もっと具体的な項目に落とし込むべきです．</li>
+<li>レポートの最終目標は将来の自分へのメモです．自分の役にたつ言葉・手順を残してください．</li>
+<li>悪くないよ．スタイルを使う方が便利．キャプションがないので再提出．それと縛りは決意表明ではなく，具体的に．</li>
+<li>大学で学ぶ一番の利点は友達と切磋琢磨できること．</li>
+<li>続ける工夫の一つに，divide and conquerというのがあります．目標を細かく分けて一つ一つ達成を積み重ねるやり方です．記録するのを忘れずに</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+引用は基本的に引用元にでてくる文章をそのまま使う．長いときとか，概念なんかはまとめてしまうが，参照元を明示．_参考_文献ってのは日本語として確立しているけど，あやふやなイメージを学生は持つので注意すべき．参照も同じかも．
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+これは例です．
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: Shigeto R. Nishitani</p>
+<p class="date">Created: 2026-06-13 Sat 11:02</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
