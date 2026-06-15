@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="jp" xml:lang="jp">
+<head>
+<!-- 2026-06-12 Fri 17:36 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>d4 5/12 docx</title>
+<meta name="author" content="Shigeto R. Nishitani" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/code-copy.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/search.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/search.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/code-copy.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">d4 5/12 docx
+<br />
+<span class="subtitle">hyperbolic discount, markdown, pandoc, docx</span>
+</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgd68ced8">1. init(initialize:初期化)</a></li>
+<li><a href="#orgaec9328">2. AoyamaType</a></li>
+<li><a href="#orga024d5f">3. レポート</a>
+<ul>
+<li><a href="#orgfef6b9b">3.1. 剽窃と引用</a></li>
+<li><a href="#org3e64324">3.2. レポートの体裁</a></li>
+</ul>
+</li>
+<li><a href="#orgeedf033">4. 題材 :: 双曲性ってなに？</a>
+<ul>
+<li><a href="#orge654d0e">4.1. 池田の日経記事</a></li>
+<li><a href="#orgc351b7d">4.2. OSSの便利ツールpandoc</a></li>
+</ul>
+</li>
+<li><a href="#orgf1f887e">5. 課題</a>
+<ul>
+<li><a href="#org38b5c87">5.1. GUIで</a></li>
+<li><a href="#org81e5dcf">5.2. CUIで</a></li>
+</ul>
+</li>
+<li><a href="#org02074ee">6. appendix(付録)</a>
+<ul>
+<li><a href="#orge89c850">6.1. explorerのデフォルト変更</a></li>
+<li><a href="#orgeb39089">6.2. reference.docxの作り方</a></li>
+<li><a href="#orga8c2c16">6.3. VSCode, html, md</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd68ced8" class="outline-2">
+<h2 id="orgd68ced8"><span class="section-number-2">1.</span> init(initialize:初期化)</h2>
+<div class="outline-text-2" id="text-1">
+<div class="org-src-container">
+<pre class="src src-shell">&gt; open .         <span style="color: #595959;"># </span><span style="color: #595959;">explorer&#12391;'.'(current dir)&#12434;&#38283;&#12367;</span>
+</pre>
+</div>
+<p>
+Explorerの表示をいじります(appendix 1)．
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">&gt; ls             <span style="color: #595959;"># </span><span style="color: #595959;">ls:list ('.'&#12364;&#30465;&#30053;, current dir)</span>
+aoyama_type_data.zip  bin/  comp_a_25s/
+&gt; mkdir my_comp_a <span style="color: #595959;">#</span><span style="color: #595959;">mkdir: make directory [dir]</span>
+&gt; cd comp_a_25s/ <span style="color: #595959;"># </span><span style="color: #595959;">cd : change directory [dir]</span>
+&gt; git stash      <span style="color: #595959;"># </span><span style="color: #595959;">git&#12391;&#38560;&#12377;(stash)</span>
+&gt; git pull origin main
+&gt; cd ../my_comp_a/
+                 <span style="color: #595959;"># </span><span style="color: #595959;">cd [to_dir]: '..'&#12399;&#19968;&#12388;&#19978;&#12398;dir&#12434;&#25351;&#12377;</span>
+&gt; cp -rf ../comp_a_25s/lectures/d4_docx_discount/ .
+                 <span style="color: #595959;"># </span><span style="color: #595959;">cp: copy --options [from_dir] [to_dir]</span>
+                 <span style="color: #595959;"># </span><span style="color: #595959;">-r: recursively(&#20877;&#24112;&#30340;&#12395;)</span>
+                 <span style="color: #595959;"># </span><span style="color: #595959;">-f: force(&#24375;&#21046;&#30340;&#12395;)</span>
+&gt; cd d4_docx_discount/
+&gt; open .
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgaec9328" class="outline-2">
+<h2 id="orgaec9328"><span class="section-number-2">2.</span> AoyamaType</h2>
+<div class="outline-text-2" id="text-2">
+<div class="org-src-container">
+<pre class="src src-shell">&gt; pipx install --force git+https://github.com/daddygongon/aoyamatype.git
+&gt; sudo apt install python3-tk
+&gt; pipx install PyQt6 <span style="color: #595959;">#</span><span style="color: #595959;">&#12364;&#24517;&#35201;&#12363;&#12418;&#65294;&#65294;&#65294;</span>
+&gt; aoyamatype -r
+</pre>
+</div>
+<p>
+で出てきたグラフをpngで保存．
+</p>
+</div>
+</div>
+<div id="outline-container-orga024d5f" class="outline-2">
+<h2 id="orga024d5f"><span class="section-number-2">3.</span> レポート</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+「report ==  正しい引用 + format(体裁) 」です．
+</p>
+</div>
+<div id="outline-container-orgfef6b9b" class="outline-3">
+<h3 id="orgfef6b9b"><span class="section-number-3">3.1.</span> 剽窃と引用</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li><a href="https://kwanseio365-my.sharepoint.com/:b:/g/personal/cru32369_nuc_kwansei_ac_jp/Edel35ir5tVHur-rJt3hN58BIueXisBxrCVOCY9rssOM9g?e=xgz38W">理科系の作文技術(木下是雄)，「意見と事実」</a></li>
+<li><a href="https://kwanseio365-my.sharepoint.com/:b:/g/personal/cru32369_nuc_kwansei_ac_jp/ETxjRkWsYitBqGPqWY88mYEB-fS_lY82o-7oyY4ljGF_8Q?e=UG78dg">剽窃と引用(理工学部からの通達)</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3e64324" class="outline-3">
+<h3 id="org3e64324"><span class="section-number-3">3.2.</span> <a href="https://qiita.com/daddygongon/items/3373e54f1538036d0cf4">レポートの体裁</a></h3>
+</div>
+</div>
+<div id="outline-container-orgeedf033" class="outline-2">
+<h2 id="orgeedf033"><span class="section-number-2">4.</span> 題材 :: 双曲性ってなに？</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orge654d0e" class="outline-3">
+<h3 id="orge654d0e"><span class="section-number-3">4.1.</span> <a href="https://kwanseio365-my.sharepoint.com/:b:/g/personal/cru32369_nuc_kwansei_ac_jp/EYhd0TQqO3hItmsrQWkKYb4BqOFOrVws_XWWJusX4AZJ_Q?e=7a62NY">池田の日経記事</a></h3>
+</div>
+<div id="outline-container-orgc351b7d" class="outline-3">
+<h3 id="orgc351b7d"><span class="section-number-3">4.2.</span> OSSの便利ツールpandoc</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Markdownからdocxへの変換ツールpandocのinstallと使用例です．
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">&gt; sudo apt install pandoc
+&gt; pandoc hyperbolic_discount.md --from=markdown --to=docx --output=hyperbolic_discount.docx
+&gt; open hyperbolic_discount.docx
+</pre>
+</div>
+
+<p>
+さらにreference.docxという書式フォーマットを提供するdocxを
+作っておいてそれに合わせるやり方です(付録参照)．
+</p>
+<pre class="example">
+&gt; pandoc hyperbolic_discount.md --from=markdown --to=docx --standalone --reference-doc=reference.docx --output=sample.docx
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf1f887e" class="outline-2">
+<h2 id="orgf1f887e"><span class="section-number-2">5.</span> 課題</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+「AoyamaTypeによる双曲性の評価」と題するレポートを作成してください．
+</p>
+</div>
+<div id="outline-container-org38b5c87" class="outline-3">
+<h3 id="org38b5c87"><span class="section-number-3">5.1.</span> GUIで</h3>
+<div class="outline-text-3" id="text-5-1">
+<ol class="org-ol">
+<li><p>
+結果 : グラフの貼り付け
+</p>
+<pre class="example">
+aoyamatype -rのグラフ
+</pre>
+
+<p>
+を貼り付けて，
+</p></li>
+<li><p>
+分析 : 初回と比較
+</p>
+<pre class="example">
+&gt; aoyamatype -c
+</pre>
+
+<p>
+の結果を初回と比較して，寸評を加え
+</p></li>
+<li>議論 : 自分の「続ける工夫」を書き加えて，</li>
+<li>体裁 : Reportの体裁にしてLUNAへpdfで提出してください．</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org81e5dcf" class="outline-3">
+<h3 id="org81e5dcf"><span class="section-number-3">5.2.</span> CUIで</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+aoyamatype -rのプロットをmy_comp_a/d4_&#x2026;/aoyama_reportに保存
+</p>
+<div class="org-src-container">
+<pre class="src src-nil">&gt; pandoc aoyama.md --from=markdown --to=docx --output=aoyama.docx
+あるいは
+&gt; pandoc aoyama.md --from=markdown --to=docx --standalone --reference-doc=reference.docx --output=aoyama.docx
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org02074ee" class="outline-2">
+<h2 id="org02074ee"><span class="section-number-2">6.</span> appendix(付録)</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orge89c850" class="outline-3">
+<h3 id="orge89c850"><span class="section-number-3">6.1.</span> explorerのデフォルト変更</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+Explorerの表示を見やすいようにデフォルトを変更します
+</p>
+<ol class="org-ol">
+<li>並べ替え-&gt;グループ化-&gt;更新日時を選択</li>
+<li>ミツぼたん(&#x2026;これが詳しい設定のアイコン)-&gt; オプション選択</li>
+<li>表示タブを選択</li>
+<li>「フォルダーに適用」ボタンを押して，「はい」を選んで，「OK」を押す</li>
+<li>再openしてデフォルトで適用されているのを確認</li>
+</ol>
+
+<div id="org30ba1f6" class="figure">
+<p><a href="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/151211/ab0207af-c626-4bff-96bb-6de052771300.png"><img src="../figs/ss_change_default_explorer_disp_marked.png" alt="ss_change_default_explorer_disp_marked.png" /></a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgeb39089" class="outline-3">
+<h3 id="orgeb39089"><span class="section-number-3">6.2.</span> reference.docxの作り方</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+これには，
+</p>
+<pre class="example">
+&gt; pandoc --print-default-data-file reference.docx &gt; reference.docx
+</pre>
+
+<p>
+としてreference.docsという雛形を作っておいて，
+書式をそれぞれのパーツで調整して，保存しておきます．
+</p>
+
+
+<div id="org1463a51" class="figure">
+<p><a href="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/151211/342d7a5a-07db-4aa6-a2c1-f9a8cb91d15f.png"><img src="./figs/screen_shot_word_style.png" alt="screen_shot_word_style.png" /></a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orga8c2c16" class="outline-3">
+<h3 id="orga8c2c16"><span class="section-number-3">6.3.</span> VSCode, html, md</h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+markdownからdocxを作るのが速いです．
+markdownの編集には，code編集ソフトのVSCodeが便利です．
+このソフトの操作は，
+３回ほど後のPythonコーディングで詳しく紹介します．
+時間がある人は，自分で調べて使ってみてください．
+</p>
+<ul class="org-ul">
+<li><a href="https://cs.kwansei.ac.jp/junbi/?%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A/VSCode/%E6%9C%AC%E4%BD%93">vscodeのインストール</a></li>
+<li>Get Started with VS Code(Welcome画面でStartの下にあるOpen a Walkthrough&#x2026;をクリック)</li>
+
+<li>MarkDown &lt;-&gt; html (WYSIWYG)</li>
+<li><a href="https://qiita.com/oreo/items/82183bfbaac69971917f">Markdown記法一覧</a></li>
+<li><a href="https://gist.github.com/higeknuckle/c9b2dac43fffa3ae0774e148a69a2e6b">Markdownチートシート</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Shigeto R. Nishitani</p>
+<p class="date">Created: 2026-06-12 Fri 17:36</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
